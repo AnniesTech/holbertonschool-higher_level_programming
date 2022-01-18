@@ -41,16 +41,16 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, new_size):
+    def size(self, value):
         """setter of size"""
-        if not isinstance(new_size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif new_size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = new_size
+            self.__size = value
 
     def area(self):
         """Public instance method:
             - Return: the current square area"""
-        return(self.__size * self.__size)
+        return self.__size ** 2
