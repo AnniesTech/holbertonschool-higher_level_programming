@@ -15,24 +15,24 @@ class Square:
         """ > """
         return self.area() > other.area()
 
-    def __mi__(self, other):
+    def __me__(self, other):
         """ >= """
         return self.area() >= other.area()
 
-    def __mei__(self, other):
+    def __le__(self, other):
         """ <= """
         return self.area() <= other.area()
 
-    def __meq__(self, other):
+    def __lt__(self, other):
         """ <  """
         return self.area() < other.area()
 
-    def __ig__(self, other):
-        """ == """
+    def __iq__(self, other):
+        """ Method ==  """
         return self.area() == other.area()
 
     def __dif__(self, other):
-        """ != """
+        """ Method != """
         return self.area() != other.area()
 
     @property
@@ -41,16 +41,16 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, value):
+    def size(self, new_size):
         """setter of size"""
-        if not isinstance(value, int):
+        if not isinstance(new_size, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        elif new_size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = value
+            self.__size = new_size
 
     def area(self):
         """Public instance method:
             - Return: the current square area"""
-        return self.__size ** 2
+        return(self.__size * self.__size)
