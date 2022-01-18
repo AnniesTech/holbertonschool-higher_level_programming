@@ -6,16 +6,15 @@ class Square:
     """Class Square that defines a square:
         - Private instance attribute: size
         - Instantiation with optional size: def __init__(self, size=0)"""
-
     def __init__(self, size=0):
-        """Initialite Size as a private attribute"""
+        """Initialize Size as a private attribute"""
         self.size = size
 
-    def __mq__(self, other):
+    def __gt__(self, other):
         """ > """
         return self.area() > other.area()
 
-    def __me__(self, other):
+    def __ge__(self, other):
         """ >= """
         return self.area() >= other.area()
 
@@ -27,11 +26,11 @@ class Square:
         """ <  """
         return self.area() < other.area()
 
-    def __iq__(self, other):
-        """ Method ==  """
+    def __eq__(self, other):
+        """ Method == """
         return self.area() == other.area()
 
-    def __dif__(self, other):
+    def __ne__(self, other):
         """ Method != """
         return self.area() != other.area()
 
@@ -52,5 +51,5 @@ class Square:
 
     def area(self):
         """Public instance method:
-            - Return: the current square area"""
+           * Return: the current square area"""
         return self.__size ** 2
