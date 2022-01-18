@@ -15,6 +15,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+
     def area(self):
         """Public instance method:
             - Return: the current square area"""
@@ -24,7 +25,7 @@ class Square:
     def size(self):
         """Property of size"""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """setter of size"""
