@@ -1,0 +1,7 @@
+================================
+Test cases for 6-max_integer.py
+================================
+
+This program finds and returns the max integer of a list
+
+
