@@ -1,0 +1,110 @@
+================================
+Test cases for 3-say_my_name.py
+================================
+
+This program will print a square with the char #
+
+import module:
+    >>> print_square = __import__('4-print_square').print_square
+
+Test Cases
+===========
+This program will check if size is a positive integer and
+then print a square with its value.
+
+Testing with 0
+---------------
+
+    >>> print_square(0)
+    >>> 
+
+Testing with positive integers
+------------------------------
+
+    >>> print_square(1)
+    #
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+TypeError
+=========
+This program can take only integers
+
+Test with a negative number
+---------------------------
+
+    >>> print_square(-3)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+Testing with a float number
+---------------------------
+
+    >>> print_square(0.0)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(3.0)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Testing with a negative float value
+------------------------------------
+
+    >>> print_square(-3.0)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(-10.0)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Testing with a string
+---------------------
+
+    >>> print_square("2")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Testing with a list
+-------------------
+
+    >>> print_square([2])
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Testing Arguments
+=================
+This program has a minimun arguments needed: 1.
+and has a maximum argument: 1.
+
+Test with empty Arguments
+-------------------------
+
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+Test with 1 argument
+--------------------
+
+    >>> print_square(2)
+    ##
+    ##
+
+Test with 2 arguments
+---------------------
+
+    >>> print_square(1, 2)
+    Traceback (most recent call last):
+    TypeError: print_square() takes 1 positional argument but 2 were given
