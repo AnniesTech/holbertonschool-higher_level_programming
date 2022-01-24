@@ -1,0 +1,99 @@
+===============================
+Test cases for 0-add_integer.py
+===============================
+
+This program has the function that adds two integers and the values
+provided must be only integers or float, otherwise, TypeError will be raised.
+
+import module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test Cases
+==========
+
+This program will take two arguments that must be int or float then return the addition.
+Take into account that b already has a default value of 98 in the main file.
+
+Using the default b number(98)
+-------------------------
+
+    >>> add_integer(10)
+    108
+    >>> add_integer(-5)
+    93
+
+Testing general additions
+-------------------------
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(100, -2)
+    98
+
+Testing only negative numbers
+-----------------------------
+
+    >>> add_integer(-10, -5)
+    -15
+    >>> add_integer(-20, -10)
+    -30
+
+Float argument
+===============
+This program can take floats as arguments but it converts it into integers
+before adding them. 
+
+Passing float numbers
+---------------------
+
+    >>> add_integer(14.5, 5)
+    19
+
+    >>> add_integer(15.8, 5.3)
+    20
+
+    >>> add_integer(-13.5, -5.34)
+    -18
+
+TypeError
+==========================
+This program can only take integers or floats as argument, otherwise it
+will raise TypeError
+
+Passing string in a
+---------------------
+
+    >>> add_integer("Hola", 1)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Passing string in b
+---------------------
+
+    >>> add_integer(2, "hola")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+Passing list in a
+---------------------
+    >>> add_integer([2, 3], 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+
+Testing arguments
+=================
+This program has a minimun arguments needed: 1.
+and has a maximum argument: 2.
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(23)
+    121
+
+    >>> add_integer(3, 4, 13)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
