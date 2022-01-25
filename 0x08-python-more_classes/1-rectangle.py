@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 """Class Rectangle definition"""
 
+
 class Rectangle:
     """Class Rectangle  that defines a Rectangle :
         - Private instance attribute: width
-        - Instantiation with width"""
+        - Private instance attribute: height
+        - Instantiation with optional width and height: def __init__(self, width=0, height=0)"""
 
     def __init__(self, width=0, height=0):
         """Atributes of the object"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
