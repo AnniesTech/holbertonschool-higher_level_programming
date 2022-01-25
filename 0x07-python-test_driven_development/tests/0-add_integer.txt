@@ -57,12 +57,12 @@ Passing float numbers
     -18
 
 TypeError
-==========================
+==========
 This program can only take integers or floats as argument, otherwise it
 will raise TypeError
 
 Passing string in a
----------------------
+--------------------
 
     >>> add_integer("Hola", 1)
     Traceback (most recent call last):
@@ -81,6 +81,35 @@ Passing list in a
     Traceback (most recent call last):
     TypeError: a must be an integer
 
+Testing with False and True
+---------------------------
+    >>> add_integer(False, 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(4, True)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+Testing with a Lists and tuples
+-------------------------------
+    >>> add_integer(4, [2, "Hello"])
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer((2, 3), [2, "Hello"])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Testing with a string in a and b
+---------------------------------
+    >>> add_integer("a", 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(4, "3")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
 Testing arguments
 =================

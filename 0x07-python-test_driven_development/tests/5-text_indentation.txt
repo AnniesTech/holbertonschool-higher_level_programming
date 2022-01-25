@@ -1,0 +1,170 @@
+====================================
+Test cases for 5-text_indentation.py
+====================================
+
+This program has the function that adds 2 new lines in a text after it finds the
+special chars "." "?" ":". There should be no space at the beginning or at the end
+of each printed line. The text must be a string.
+
+import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test Cases
+==========
+
+Testing with Normal strings
+---------------------------
+
+    >>> string = "Lorem: ipsum dolor sit amet, consectetur adipiscing elit."
+    
+    >>> text_indentation(string)
+    Lorem:
+    <BLANKLINE>
+    ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+
+Testing with Long strings
+--------------------------
+
+    >>> string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin ultrices nisl at tincidunt. Donec tempor dictum libero vitae cursus. Ut feugiat augue vel fringilla fringilla. Quisque viverra dolor tellus, scelerisque varius nisi accumsan eget. Pellentesque consequat ultrices lobortis. Pellentesque turpis diam, congue ac consequat a, dapibus et sem. Nulla sed libero velit. Fusce pellentesque a mi quis hendrerit. Etiam iaculis velit non massa tincidunt,"
+
+    >>> text_indentation(string)
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Integer sollicitudin ultrices nisl at tincidunt.
+    <BLANKLINE>
+    Donec tempor dictum libero vitae cursus.
+    <BLANKLINE>
+    Ut feugiat augue vel fringilla fringilla.
+    <BLANKLINE>
+    Quisque viverra dolor tellus, scelerisque varius nisi accumsan eget.
+    <BLANKLINE>
+    Pellentesque consequat ultrices lobortis.
+    <BLANKLINE>
+    Pellentesque turpis diam, congue ac consequat a, dapibus et sem.
+    <BLANKLINE>
+    Nulla sed libero velit.
+    <BLANKLINE>
+    Fusce pellentesque a mi quis hendrerit.
+    <BLANKLINE>
+    Etiam iaculis velit non massa tincidunt,
+
+Testing with spaces
+-------------------
+
+    >>> string = "Hello welcome to the test"
+
+    >>> text_indentation(string)
+    Hello welcome to the test
+
+    >>> string = "   Hello welcome    "
+
+    >>> text_indentation(string)
+    Hello welcome
+
+Testing with multiple spaces
+-----------------------------
+
+    >>> string = "  hello,    set:  appointment??   great,,,,.  bye?"
+
+    >>> text_indentation(string)
+    hello,    set:
+    <BLANKLINE>
+    appointment?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    great,,,,.
+    <BLANKLINE>
+    bye?
+    <BLANKLINE>
+
+
+    >>> string = "1        .2         3.     end:"
+
+    >>> text_indentation(string)
+    1        .
+    <BLANKLINE>
+    2         3.
+    <BLANKLINE>
+    end:
+    <BLANKLINE>
+
+Testing with punctuation at the end
+------------------------------------
+
+    >>> string = "aaaa, aaa. aaa."
+
+    >>> text_indentation(string)
+    aaa, aaa.
+    <BLANKLINE>
+    aaa.
+    <BLANKLINE>
+
+Testing leading with whitespace at the end
+-------------------------------------------
+
+    >>> string = "aaaa, aaaa. aaaa.       "
+
+    >>> text_indentation(string)
+    aaaa, aaaa.
+    <BLANKLINE>
+    aaa.
+    <BLANKLINE>
+
+TypeError
+==========
+This program can only take these arguments:
+- strings
+
+    >>> string = 5
+
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> string = float('a')
+
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> string = float('b')
+
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> string = [1, 2, 3]
+
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> string = {"hola", "hola"}
+
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> string = 3.5
+
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> string = True
+
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> string = False
+
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> string = ""
+
+    >>> text_indentation(string)
