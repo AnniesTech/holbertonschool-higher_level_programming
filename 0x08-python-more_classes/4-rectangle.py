@@ -68,3 +68,7 @@ class Rectangle:
                 if (i != (self.height - 1)):
                     result = result + "\n"
         return result
+
+    def __repr__(self):
+        """Method that returns a representation of str"""
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
