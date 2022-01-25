@@ -6,7 +6,8 @@ class Rectangle:
     """Class Rectangle  that defines a Rectangle :
         - Private instance attribute: width
         - Private instance attribute: height
-        - Instantiation with optional width and height: def __init__(self, width=0, height=0)"""
+        - Instantiation with optional width and
+        height: def __init__(self, width=0, height=0)"""
 
     def __init__(self, width=0, height=0):
         """Atributes of the object"""
