@@ -63,12 +63,13 @@ class Rectangle:
     def __str__(self):
         """Prints a Rectangle"""
         result = ""
+        symbol = str(self.print_symbol)
         if self.width <= 0 or self.height <= 0:
             return result
         else:
             for i in range(self.height):
                 for j in range(self.width):
-                    result += "#"
+                    result += symbol
                 if (i != (self.height - 1)):
                     result = result + "\n"
         return result
