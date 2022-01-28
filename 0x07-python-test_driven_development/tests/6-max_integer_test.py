@@ -1,12 +1,9 @@
-================================
-Test cases for 6-max_integer.py
-================================
+#!/usr/bin/python3
 
-This program finds and returns the max integer of a list using unittest
+""" This program finds and returns the max integer of a list using unittest """
 
 import unittest
 
-import module:
 max_integer = __import__('6-max_integer_test').max_integer
 
 
