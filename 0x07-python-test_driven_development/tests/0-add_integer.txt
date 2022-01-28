@@ -55,6 +55,7 @@ Passing float numbers
 
     >>> add_integer(-13.5, -5.34)
     -18
+
 Testing with case NaN
 -----------------------
 
