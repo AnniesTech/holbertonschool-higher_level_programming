@@ -7,7 +7,7 @@ This program finds and returns the max integer of a list using unittest
 import unittest
 
 import module:
-max_integer = __import__('6-max_integer').max_integer
+max_integer = __import__('6-max_integer_test').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
