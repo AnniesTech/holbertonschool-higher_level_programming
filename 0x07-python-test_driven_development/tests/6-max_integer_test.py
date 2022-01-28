@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-
-""" This program finds and returns the max integer of a list using unittest """
+"""Unittest for max_integer
+"""
 
 import unittest
-
-max_integer = __import__('6-max_integer_test').max_integer
-
+max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """Class to Test Max Integer"""
