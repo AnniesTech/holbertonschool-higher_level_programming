@@ -55,6 +55,19 @@ Passing float numbers
 
     >>> add_integer(-13.5, -5.34)
     -18
+Testing with case NaN
+-----------------------
+
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+Testing to check to Inf
+------------------------
+
+    >>> add_integer(float('Inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
 
 TypeError
 ==========
