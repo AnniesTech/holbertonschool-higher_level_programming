@@ -48,6 +48,15 @@ Testing with positive and negative floats:
     >>> matrix_divided(matrix , 3.5)
     [[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
 
+Testing infinity
+=================
+
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+    >>> matrix_divided(matrix, float('NaN'))
+    [[nan, nan, nan], [nan, nan, nan]]
+
 TypeErrors
 ===========
 This program can only take these arguments:

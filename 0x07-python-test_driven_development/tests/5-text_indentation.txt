@@ -96,7 +96,7 @@ Testing with punctuation at the end
     >>> string = "aaaa, aaa. aaa."
 
     >>> text_indentation(string)
-    aaa, aaa.
+    aaaa, aaa.
     <BLANKLINE>
     aaa.
     <BLANKLINE>
@@ -109,7 +109,7 @@ Testing leading with whitespace at the end
     >>> text_indentation(string)
     aaaa, aaaa.
     <BLANKLINE>
-    aaa.
+    aaaa.
     <BLANKLINE>
 
 TypeError
