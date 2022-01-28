@@ -123,18 +123,6 @@ This program can only take these arguments:
     Traceback (most recent call last):
     TypeError: text must be a string
 
-    >>> string = float('a')
-
-    >>> text_indentation(string)
-    Traceback (most recent call last):
-    TypeError: text must be a string
-
-    >>> string = float('b')
-
-    >>> text_indentation(string)
-    Traceback (most recent call last):
-    TypeError: text must be a string
-
     >>> string = [1, 2, 3]
 
     >>> text_indentation(string)
