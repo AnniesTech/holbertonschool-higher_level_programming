@@ -12,6 +12,22 @@ importe module:
 
     >>> MyList = __import__('1-my_list').MyList
 
+Documentation
+=============
+Verifying if our modules an funtions are documented.
+
+    >>> module_doc = __import__("1-my_list").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> class_doc = __import__("1-my_list").MyList.__doc__
+    >>> print(len(class_doc) > 0)
+    True
+
+    >>> method_doc = __import__("1-my_list").MyList.print_sorted.__doc__
+    >>> print(len(method_doc) > 0)
+    True
+
 Test Class
 ==========
 
