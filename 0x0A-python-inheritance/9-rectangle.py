@@ -23,6 +23,6 @@ class Rectangle(BaseGeometry):
         return(self.__width * self.__height)
 
     def __str__(self):
-        """Should print, and str() should return,
-        the following rectangle description: [Rectangle] <width>/<height>"""
+        """Print() should print, and str() should return,
+        the square description: [Square] <width>/<height>"""
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
