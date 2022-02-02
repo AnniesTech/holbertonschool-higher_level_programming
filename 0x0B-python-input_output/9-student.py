@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Definition of  class Student"""
 
+
 class Student:
     """Public instance attributes:
         - first_name
