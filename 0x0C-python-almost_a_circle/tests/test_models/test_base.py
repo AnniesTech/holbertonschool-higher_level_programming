@@ -3,7 +3,7 @@
 
 
 import unittest
-import pep8
+import pycodestyle as pep8
 import os
 from models.base import Base
 from models.rectangle import Rectangle
@@ -59,13 +59,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(type(base_instance), Base)
         self.assertTrue(isinstance(base_instance, Base))
 
-    def test_to_json_string(self):
-        """ Test to_json_string method """
-        rectangle_instance = Rectangle(9, 10, 2, 8, 70)
-        rectangle_data = re1.to_dictionary()
-        json_data = Base.to_json_string([rect_data])
-        self.assertEqual(type(json_data), str)
-
     def test_empty_to_json_string(self):
         """ Test for a empty data on to_json_string method """
         empty_data = []
@@ -75,3 +68,6 @@ class TestBase(unittest.TestCase):
         empty_data = None
         json_data = Base.to_json_string(empty_data)
         self.assertEqual(json_data, "[]")
+
+if __name__ == "__main__":
+    unittest.main()

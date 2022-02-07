@@ -3,9 +3,10 @@
 
 
 import unittest
+import pycodestyle as pep8
 import io
 import json
-from models import square
+from models.square import Square
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -15,11 +16,11 @@ class testcases(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         Base._Base_objects = 0
-        cls.c1 = square(1)
-        cls.c2 = square(1, 2)
-        cls.c3 = square(2, 3, 4)
-        cls.c4 = square(4, 5, 6)
-        cls.c5 = square(6, 7, 8, 9)
+        cls.c1 = Square(1)
+        cls.c2 = Square(1, 2)
+        cls.c3 = Square(2, 3, 4)
+        cls.c4 = Square(4, 5, 6)
+        cls.c5 = Square(6, 7, 8, 9)
         cls.c1.id = 1
         cls.c2.id = 2
         cls.c3.id = 3
@@ -28,14 +29,14 @@ class testcases(unittest.TestCase):
 
     def test_square_instance(self):
         """Tests if Square is instance of Rectangle and Base"""
-        ss = square(5, 2, 1, 20)
-        self.assertEqual(type(ss), square)
-        self.assertTrue(type(ss) == square)
+        ss = Square(5, 2, 1, 20)
+        self.assertEqual(type(ss), Square)
+        self.assertTrue(type(ss) == Square)
         self.assertFalse(type(ss) == Rectangle)
         self.assertFalse(type(ss) == Base)
         self.assertTrue(isinstance(ss, Base))
         self.assertTrue(isinstance(ss, Rectangle))
-        self.assertTrue(isinstance(ss, square))
+        self.assertTrue(isinstance(ss, Square))
 
     def test_id(self):
         self.assertEqual(self.c1.id, 1)
@@ -46,35 +47,38 @@ class testcases(unittest.TestCase):
 
     def test_size(self):
         self.assertEqual(self.c1.size, 1)
-        self.assertEqual(self.c2.size, 2)
-        self.assertEqual(self.c3.size, 3)
+        self.assertEqual(self.c2.size, 1)
+        self.assertEqual(self.c3.size, 2)
         self.assertEqual(self.c4.size, 4)
-        self.assertEqual(self.c5.size, 5)
+        self.assertEqual(self.c5.size, 6)
 
     def test_width(self):
         self.assertEqual(self.c1.width, 1)
-        self.assertEqual(self.c2.width, 2)
-        self.assertEqual(self.c3.width, 3)
+        self.assertEqual(self.c2.width, 1)
+        self.assertEqual(self.c3.width, 2)
         self.assertEqual(self.c4.width, 4)
-        self.assertEqual(self.c5.width, 5)
+        self.assertEqual(self.c5.width, 6)
 
     def test_height(self):
         self.assertEqual(self.c1.height, 1)
-        self.assertEqual(self.c2.height, 2)
-        self.assertEqual(self.c3.height, 3)
+        self.assertEqual(self.c2.height, 1)
+        self.assertEqual(self.c3.height, 2)
         self.assertEqual(self.c4.height, 4)
-        self.assertEqual(self.c5.height, 5)
+        self.assertEqual(self.c5.height, 6)
 
     def test_x(self):
-        self.assertEqual(self.c1.x, 1)
+        self.assertEqual(self.c1.x, 0)
         self.assertEqual(self.c2.x, 2)
         self.assertEqual(self.c3.x, 3)
-        self.assertEqual(self.c4.x, 4)
-        self.assertEqual(self.c5.x, 5)
+        self.assertEqual(self.c4.x, 5)
+        self.assertEqual(self.c5.x, 7)
 
     def test_y(self):
-        self.assertEqual(self.c1.y, 1)
-        self.assertEqual(self.c2.y, 2)
-        self.assertEqual(self.c3.y, 3)
-        self.assertEqual(self.c4.y, 4)
-        self.assertEqual(self.c5.y, 5)
+        self.assertEqual(self.c1.y, 0)
+        self.assertEqual(self.c2.y, 0)
+        self.assertEqual(self.c3.y, 4)
+        self.assertEqual(self.c4.y, 6)
+        self.assertEqual(self.c5.y, 8)
+
+if __name__ == "__main__":
+    unittest.main()
