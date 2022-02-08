@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Definition of class Base"""
 import json
+from logging import exception
 
 
 class Base:
@@ -81,5 +82,5 @@ class Base:
             with open(filename, "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
                 return [cls.create(**d) for d in list_dicts]
-        except:
+        except Exception:
             return []
