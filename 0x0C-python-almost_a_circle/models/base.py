@@ -38,7 +38,7 @@ class Base:
         - If list_objs is None, save an empty list
         - The filename must be: <Class name>.json - example: Rectangle.json """
         filename = cls.__name__ + ".json"
-        with open(filename, "w", encoding="utf-8") as jsonfile:
+        with open(filename, "w") as jsonfile:
             if list_objs is None:
                 jsonfile.write("[]")
             else:
