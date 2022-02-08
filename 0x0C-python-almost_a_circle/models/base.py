@@ -5,6 +5,7 @@ from logging import exception
 
 
 class Base:
+    """Class Base"""
 
     __nb_objects = 0
 
