@@ -8,10 +8,10 @@ request(url, (err, reponse, body) => {
     let cont = 0;
     const respo = JSON.parse(body);
     const result = respo.results;
-    for (let i = 0; i < result.length; i++) {
+    for (const i in result) {
       const characters = result[i].characters;
-      for (let j = 0; j < characters.length; j++) {
-        if (characters[j].search('18') > 0) {
+      for (const chars in characters) {
+        if (characters[j].includes('18')) {
           cont++;
         }
       }
