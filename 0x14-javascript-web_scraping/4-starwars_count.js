@@ -8,9 +8,9 @@ request(url, (err, reponse, body) => {
     let cont = 0;
     const result = JSON.parse(body).results;
     for (const i in result) {
-      const characters = result[i].characters;
-      for (const chars in characters) {
-        if (characters[j].includes('18')) {
+      const character = result[i].characters;
+      for (const i in character) {
+        if (character[i].includes('18')) {
           cont++;
         }
       }
