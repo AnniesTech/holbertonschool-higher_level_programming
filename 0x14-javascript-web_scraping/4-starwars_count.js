@@ -1,20 +1,20 @@
 #!/usr/bin/node
 const request = require('request');
 const url = process.argv[2];
-request(url, (err, reponse, body) => {
-  if (err) {
-    console.log(err);
+request(url, (error, response, body) => {
+  if (error) {
+    console.log(error);
   } else {
     let cont = 0;
     const result = JSON.parse(body).results;
     for (const i in result) {
       const character = result[i].characters;
-      for (const i in character) {
-        if (character[i].includes('18')) {
+      for (const j in character) {
+        if (character[j].includes('18')) {
           cont++;
         }
       }
     }
+    console.log(cont);
   }
-  console.log(cont);
 });
